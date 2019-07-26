@@ -76,14 +76,13 @@ export class CadastrarPessoaComponent implements OnInit {
     this.pessoa = this.formulario.value;
     this.pessoa.id = this.idPessoa;
   	this.pessoa.telefones = this.telefones;
-    console.log(this.pessoa);
     if(this.pessoa.id){
       this.api.updatePessoa(this.pessoa).subscribe((response) => {
-        this.router.navigate(['']);
+        this.router.navigate(['/listar-pessoas']);
       });
     }else{
       this.api.createPessoa(this.pessoa).subscribe((response) => {
-        this.router.navigate(['']);
+        this.router.navigate(['/listar-pessoas']);
       });
     }
   }

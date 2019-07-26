@@ -1,9 +1,8 @@
 table {
-  width: 100%;
 }
 
-.card {
-  height: 100%;
+.cadastrar-pessoa {
+  margin-left:8px;
 }
 
 .botao-tel{margin-top:8px;}

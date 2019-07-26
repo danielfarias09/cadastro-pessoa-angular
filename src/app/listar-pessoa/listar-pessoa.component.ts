@@ -21,7 +21,7 @@ export class ListarPessoaComponent implements OnInit {
 
   ngOnInit() {
     this.nome = "";
-    this.cpf= "";
+    this.cpf = "";
     this.pessoas = new Array<Pessoa>();
   	this.getPessoas();
   }

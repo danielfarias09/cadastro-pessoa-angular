@@ -1,0 +1,14 @@
+<header>
+  <nav class ="navbar navbar-expand-md navbar-light  bg-light ">
+  <div class="float-right"><a routerLink="/listar-pessoas" class="navbar-brand">Cadastro de Pessoas</a></div>
+  
+  <ul class="navbar-nav ml-auto">
+     
+    <li><a *ngIf="loginService.isUserLoggedIn()" routerLink="/cadastrar-pessoa" class="nav-link">cadastrar Pessoa</a></li>
+    <li><a *ngIf="!loginService.isUserLoggedIn()" routerLink="/" class="nav-link">Login</a></li>
+    <li><a *ngIf="loginService.isUserLoggedIn()" routerLink="/logout" class="nav-link">Logout</a></li>
+  
+  </ul>
+    </nav>
+  </header>
+	

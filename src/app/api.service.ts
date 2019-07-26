@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders  } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -9,11 +9,11 @@ export class ApiService {
   constructor(private http: HttpClient) {}
 
   getPessoas(nome, cpf) {
-    	return this.http.get('http://localhost:8080/pessoas/',{params:{nome: nome, cpf: cpf}});
+    	return this.http.get('http://localhost:8080/pessoas/',{ params:{nome: nome, cpf: cpf} });
   	}
 
   createPessoa(pessoa){
-    return  this.http.post('http://localhost:8080/pessoas/',pessoa);
+    return  this.http.post('http://localhost:8080/pessoas/', pessoa);
  	}
 
   getPessoa(id){
@@ -25,7 +25,7 @@ export class ApiService {
  	}
 
   updatePessoa(pessoa){
-    return  this.http.put('http://localhost:8080/pessoas/',pessoa);
+    return  this.http.put('http://localhost:8080/pessoas/' + pessoa.id, pessoa);
   }
 
 }
